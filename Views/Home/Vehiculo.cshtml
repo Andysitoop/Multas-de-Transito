@@ -1,0 +1,54 @@
+﻿@{
+    ViewData["Title"] = "Vehiculo.cshtml";
+}
+
+<h1>Vehiculo</h1>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Agregar Vehiculo
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Agregar Vehiculo</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="VehiculoForm" method="post" action="/AgregarVehiculo">
+                    <div class="form-row">
+                          <div class="form-group col">
+                            <label for="modelo">Modelo:</label>
+                            <input type="text" class="form-control" id="modelo" name="modelo" required>
+                        </div>
+                        <div class="form-group col">
+                            <label for="placa">Placa:</label>
+                            <input type="text" class="form-control" id="placa" name="placa" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col">
+                            <label for="marca">Marca:</label>
+                            <input type="text" class="form-control" id="marca" name="marca" required>
+                        </div>
+                        <div class="form-group col">
+                            <label for="linea">Linea:</label>
+                            <input type="text" class="form-control" id="linea" name="linea">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="tipo">Tipo</label>
+                        <input type="text" class="form-control" id="tipo" name="tipo">
+                    </div>
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-success mt-3 btn-block">Agregar</button>
+
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
